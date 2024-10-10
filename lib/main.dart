@@ -1,6 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
-import 'features/presenation/views/responsive_dash_board_view.dart';
+import 'features/presenation/views/dash_board_view.dart';
 
 void main() {
   runApp(const ResponsiveDashBoard());
@@ -11,8 +11,20 @@ class ResponsiveDashBoard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home : ResponsiveDashBoardView() 
+    return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      debugShowCheckedModeBanner: false,
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.mouse,
+          PointerDeviceKind.touch,
+          PointerDeviceKind.stylus,
+          PointerDeviceKind.unknown,
+        },
+      ),
+      home: const DashBoardView(),
     );
   }
 }
