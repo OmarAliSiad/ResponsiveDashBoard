@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/features/data/models/drawer_item.dart';
+import 'package:responsive_dash_board/features/presenation/widgets/active_and_incative_item.dart';
+import 'package:responsive_dash_board/features/presenation/widgets/custom_settings.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/drawer_items_list_view.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/user_info_tile.dart';
 import '../../../core/utils/assets.dart';
@@ -9,17 +12,36 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Expanded(
-      child: Column(
-        children: [
-          UserInfoTile(
-            title: 'Lekan Okeowo',
-            subTitle: 'demo@gmail.com',
-            image: Assets.imagesAvatar3,
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserInfoTile(
+              title: 'Lekan Okeowo',
+              subTitle: 'demo@gmail.com',
+              image: Assets.imagesAvatar3,
+            ),
           ),
-          SizedBox(
-            height: 20,
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 20,
+            ),
           ),
           DrawerItmesListView(),
+          SliverToBoxAdapter(
+            child: Expanded(
+              child: SizedBox(
+                height: 400,
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: CustomSettings(),
+          ),
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 48,
+            ),
+          ),
         ],
       ),
     );
