@@ -9,8 +9,10 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Expanded(
-      child: CustomScrollView(
+    return Container(
+      color: Colors.white,
+      child: const CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: UserInfoTile(
@@ -25,21 +27,7 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           DrawerItmesListView(),
-          SliverFillRemaining(
-            child: Expanded(
-              child: SizedBox(
-                height: 20,
-              ),
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: CustomSettings(),
-          ),
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: 48,
-            ),
-          ),
+          SliverFillRemaining(hasScrollBody: false, child: CustomSettings()),
         ],
       ),
     );
