@@ -14,7 +14,7 @@ class AllExpensesHeader extends StatelessWidget {
           style: AppStyles.styleSemiBold20(),
         ),
         const Expanded(child: SizedBox()),
-        const RanggeOptions(),
+        const RangeOptions(),
       ],
     );
   }
