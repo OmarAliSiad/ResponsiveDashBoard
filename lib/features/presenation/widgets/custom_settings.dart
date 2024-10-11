@@ -11,6 +11,11 @@ class CustomSettings extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        const Expanded(
+          child: SizedBox(
+            height: 20,
+          ),
+        ),
         InActiveDrawerItem(
           drawerItemModel: DrawerItemModel(
               title: 'Setting system', image: Assets.imagesSettings),
@@ -19,6 +24,9 @@ class CustomSettings extends StatelessWidget {
           drawerItemModel: DrawerItemModel(
               title: 'Logout account', image: Assets.imagesLogout),
         ),
+        const SizedBox(
+          height: 48,
+        )
       ],
     );
   }
