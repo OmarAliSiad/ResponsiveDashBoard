@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/custom_container_back_%20ground.dart';
-import 'package:responsive_dash_board/features/presenation/widgets/latest_transction_list_view.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/quick_invoice_header.dart';
 
 import 'latest_transction.dart';
@@ -17,7 +16,6 @@ class QuickInvoice extends StatelessWidget {
         children: [
           QuickInvoiceHeader(),
           LatestTransction(),
-          LatestTransctionListView(),
         ],
       ),
     );
