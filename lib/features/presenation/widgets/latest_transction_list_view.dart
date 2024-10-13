@@ -12,7 +12,7 @@ class LatestTransctionListView extends StatelessWidget {
       height: 200,
       child: ListView.builder(
         itemCount: 10,
-        scrollDirection: Axis.vertical,
+        scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return const UserInfoTile(
             image: Assets.imagesAvatar1,
