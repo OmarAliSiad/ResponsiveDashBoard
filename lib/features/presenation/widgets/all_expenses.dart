@@ -10,7 +10,12 @@ class AllExpenses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomBackGroundContainer(
-      padding: 20,
+      marginTop: 40,
+      marginBottom: 24,
+      marginRight: 24,
+      marginLeft: 32,
+      paddingHorizontal: 20,
+      paddingVertical: 20,
       child: Column(
         children: [
           SizedBox(
@@ -21,6 +26,9 @@ class AllExpenses extends StatelessWidget {
             height: 16,
           ),
           AllExpensesItemListView(),
+          SizedBox(
+            height: 20,
+          )
         ],
       ),
     );
