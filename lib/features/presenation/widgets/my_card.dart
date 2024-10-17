@@ -3,7 +3,8 @@ import 'package:responsive_dash_board/core/utils/assets.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/header_and_bottom_of_card.dart';
 
 class MyCard extends StatelessWidget {
-  const MyCard({super.key});
+  final Color color ;
+  const MyCard({super.key, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class MyCard extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             borderRadius: BorderRadius.circular(12),
-            color: const Color(0xff4fb7f2),
+            color:  color,
             shape: BoxShape.rectangle),
         child: const Column(
           crossAxisAlignment: CrossAxisAlignment.end,
