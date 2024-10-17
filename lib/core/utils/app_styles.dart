@@ -29,6 +29,16 @@ abstract class AppStyles {
     );
   }
 
+
+static TextStyle styleMedium15() {
+    return const TextStyle(
+      color: Color(0xFFAAAAAA),
+      fontSize: 15,
+      fontFamily: 'Montserrat',
+      fontWeight: FontWeight.w500,
+    );
+  }
+
   static TextStyle styleMedium20() {
     return const TextStyle(
       color: Color(0xFFFFFFFF),
