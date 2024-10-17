@@ -19,15 +19,7 @@ class DesktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 2,
-          child: CustomBackGroundContainer(
-            marginTop: 40,
-            marginRight: 32,
-            marginLeft: 24,
-            marginBottom: 0,
-            paddingHorizontal: 24,
-            paddingVertical: 24,
-            child: MyCardSection(),
-          ),
+          child: MyCardSection(),
         ),
       ],
     );
