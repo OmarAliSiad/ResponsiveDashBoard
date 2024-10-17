@@ -33,14 +33,16 @@ class AllExpensesItemHeader extends StatelessWidget {
             ),
           ),
         ),
-        const Expanded(child: SizedBox()),
-        Transform.rotate(
-          angle: 2 * math.pi / 2,
-          child: Icon(
-            Icons.arrow_back_ios_new_outlined,
-            color: imageColor == null
-                ? const Color(0xFF064061)
-                : const Color(0xFFFFFFFF),
+        const Expanded(flex: 7, child: SizedBox()),
+        Expanded(
+          child: Transform.rotate(
+            angle: 2 * math.pi / 2,
+            child: Icon(
+              Icons.arrow_back_ios_new_outlined,
+              color: imageColor == null
+                  ? const Color(0xFF064061)
+                  : const Color(0xFFFFFFFF),
+            ),
           ),
         ),
       ],
