@@ -20,6 +20,7 @@ abstract class AppStyles {
     );
   }
 
+
   static TextStyle styleMedium16() {
     return const TextStyle(
       color: Color(0xFF064061),
