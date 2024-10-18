@@ -18,7 +18,14 @@ class DesktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 2,
-          child: MyCardSection(),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 5,
+                child: MyCardAndIncomeSection(),
+              ),
+            ],
+          ),
         ),
       ],
     );
