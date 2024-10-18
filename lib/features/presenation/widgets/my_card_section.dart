@@ -2,20 +2,21 @@ import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/custom_container_back_%20ground.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/custom_dots_indicator.dart';
+import 'package:responsive_dash_board/features/presenation/widgets/income_section.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/my_card.dart';
 import '../../../core/utils/app_styles.dart';
 import '../data/models/transaction_model.dart';
 import 'my_transaction_history_header.dart';
 import 'my_transactions_list_view.dart';
 
-class MyCardSection extends StatefulWidget {
-  const MyCardSection({super.key});
+class MyCardAndIncomeSection extends StatefulWidget {
+  const MyCardAndIncomeSection({super.key});
 
   @override
-  State<MyCardSection> createState() => _MyCardSectionState();
+  State<MyCardAndIncomeSection> createState() => _MyCardAndIncomeSectionState();
 }
 
-class _MyCardSectionState extends State<MyCardSection> {
+class _MyCardAndIncomeSectionState extends State<MyCardAndIncomeSection> {
   List<TransactionModel> myTransactions = [
     TransactionModel(
         title: 'Cash Withdrawal',
@@ -117,6 +118,9 @@ class _MyCardSectionState extends State<MyCardSection> {
             ),
           ),
         ),
+        const SliverToBoxAdapter(
+          child: IncomeSection(),
+        )
       ],
     );
   }
