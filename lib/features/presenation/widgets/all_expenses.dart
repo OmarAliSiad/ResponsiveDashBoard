@@ -21,7 +21,7 @@ class AllExpenses extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          AllExpensesHeader(),
+          AllExpensesHeader(title:'All Expenses',),
           SizedBox(
             height: 16,
           ),
