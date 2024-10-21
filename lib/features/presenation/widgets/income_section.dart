@@ -105,7 +105,7 @@ class _IncomeSectionState extends State<IncomeSection> {
                     },
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ],
@@ -115,7 +115,7 @@ class _IncomeSectionState extends State<IncomeSection> {
 
   PieChartData getChartData() {
     return PieChartData(
-      centerSpaceRadius: 60,
+      centerSpaceRadius: 50,
       sectionsSpace: 0,
       pieTouchData: PieTouchData(touchCallback:
           (FlTouchEvent event, PieTouchResponse? pieTouchResponse) {
