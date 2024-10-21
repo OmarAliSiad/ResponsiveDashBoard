@@ -22,7 +22,13 @@ class DesktopLayout extends StatelessWidget {
             children: [
               Expanded(
                 flex: 5,
-                child: MyCardAndIncomeSection(),
+                child: CustomScrollView(
+                    physics: BouncingScrollPhysics(),
+                    slivers: [
+                      SliverToBoxAdapter(
+                        child: MyCardAndIncomeSection(),
+                      ),
+                    ]),
               ),
             ],
           ),
