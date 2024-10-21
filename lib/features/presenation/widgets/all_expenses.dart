@@ -5,23 +5,26 @@ import 'package:responsive_dash_board/features/presenation/widgets/all_expenses_
 import 'custom_container_back_ ground.dart';
 
 class AllExpenses extends StatelessWidget {
-  const AllExpenses({super.key});
+  final double ? marginTop;
+  const AllExpenses({super.key,  this.marginTop});
 
   @override
   Widget build(BuildContext context) {
-    return const CustomBackGroundContainer(
-      marginTop: 40,
+    return CustomBackGroundContainer(
+      marginTop: marginTop ?? 40,
       marginBottom: 24,
       marginRight: 24,
       marginLeft: 32,
       paddingHorizontal: 20,
       paddingVertical: 20,
-      child: Column(
+      child: const Column(
         children: [
           SizedBox(
             height: 20,
           ),
-          AllExpensesHeader(title:'All Expenses',),
+          AllExpensesHeader(
+            title: 'All Expenses',
+          ),
           SizedBox(
             height: 16,
           ),
