@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/all_expenses.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/quick_invoice.dart';
@@ -14,7 +13,9 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
-          child: AllExpenses(),
+          child: AllExpenses(
+            marginTop: 40,
+          ),
         ),
         SliverToBoxAdapter(
           child: QuickInvoice(),
