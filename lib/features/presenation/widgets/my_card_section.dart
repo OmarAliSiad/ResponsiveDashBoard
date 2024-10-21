@@ -56,71 +56,66 @@ class _MyCardAndIncomeSectionState extends State<MyCardAndIncomeSection> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      physics: const BouncingScrollPhysics(),
-      slivers: [
-        SliverToBoxAdapter(
-          child: CustomBackGroundContainer(
-            marginTop: 40,
-            marginRight: 32,
-            marginLeft: 24,
-            marginBottom: 0,
-            paddingHorizontal: 24,
-            paddingVertical: 24,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: 420,
-                  child: Text(
-                    'My card',
-                    style: AppStyles.styleSemiBold20(),
+    return Column(
+      children: [
+        CustomBackGroundContainer(
+          marginTop: 40,
+          marginRight: 32,
+          marginLeft: 24,
+          marginBottom: 0,
+          paddingHorizontal: 24,
+          paddingVertical: 24,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 420,
+                child: Text(
+                  'My card',
+                  style: AppStyles.styleSemiBold20(),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              ExpandablePageView(
+                controller: pageController,
+                children: List.generate(
+                  3,
+                  (index) => Padding(
+                    padding: index == 1
+                        ? const EdgeInsets.symmetric(horizontal: 8)
+                        : EdgeInsets.zero,
+                    child: MyCard(color: colors[index]),
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
-                ExpandablePageView(
-                  controller: pageController,
-                  children: List.generate(
-                    3,
-                    (index) => Padding(
-                      padding: index == 1
-                          ? const EdgeInsets.symmetric(horizontal: 8)
-                          : EdgeInsets.zero,
-                      child: MyCard(color: colors[index]),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 19,
-                ),
-                CustomDotsIndicator(
-                  currentIndex: pageCurrentIndex,
-                ),
-                const Divider(
-                  indent: 1,
-                  height: 40,
-                  color: Color(0xFFF1F1F1),
-                ),
-                const MyTransactionHistoryHeader(),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text('13 April 2022', style: AppStyles.styleMedium15()),
-                const SizedBox(
-                  height: 16,
-                ),
-                MyTransactionsListView(
-                  myTransactions: myTransactions,
-                )
-              ],
-            ),
+              ),
+              const SizedBox(
+                height: 19,
+              ),
+              CustomDotsIndicator(
+                currentIndex: pageCurrentIndex,
+              ),
+              const Divider(
+                indent: 1,
+                height: 40,
+                color: Color(0xFFF1F1F1),
+              ),
+              const MyTransactionHistoryHeader(),
+              const SizedBox(
+                height: 20,
+              ),
+              Text('13 April 2022', style: AppStyles.styleMedium15()),
+              const SizedBox(
+                height: 16,
+              ),
+              MyTransactionsListView(
+                myTransactions: myTransactions,
+              )
+            ],
           ),
         ),
-        const SliverToBoxAdapter(
-          child: IncomeSection(),
-        )
+        const IncomeSection(),
       ],
     );
   }
