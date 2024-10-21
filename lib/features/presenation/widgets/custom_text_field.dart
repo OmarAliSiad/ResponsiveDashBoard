@@ -13,6 +13,7 @@ class CustomTextField extends StatelessWidget {
         contentPadding: const EdgeInsets.only(left: 20),
         fillColor: const Color((0xFFFAFAFA)),
         filled: true,
+        hintFadeDuration: const Duration(milliseconds: 500),
         border: BuildOutlineInputBoder(),
         focusedBorder: BuildOutlineInputBoder(),
         enabledBorder: BuildOutlineInputBoder(),
