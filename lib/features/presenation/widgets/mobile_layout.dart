@@ -13,9 +13,9 @@ class MobileLayout extends StatelessWidget {
       backgroundColor: const Color(0xffF7F9FA),
       appBar: CustomAppBar(globalKey: globalKey),
       key: globalKey,
-      drawer: const SizedBox(
-        width: 300,
-        child: CustomDrawer(),
+      drawer: SizedBox(
+        width: MediaQuery.sizeOf(context).width * .5,
+        child: const CustomDrawer(),
       ),
       body: const DashBoardMobileLayout(),
     );
