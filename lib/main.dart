@@ -1,9 +1,11 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'features/presenation/views/dash_board_view.dart';
 
 void main() {
-  runApp(const ResponsiveDashBoard());
+  runApp(DevicePreview(builder: (context) => const ResponsiveDashBoard()));
 }
 
 class ResponsiveDashBoard extends StatelessWidget {
@@ -12,7 +14,9 @@ class ResponsiveDashBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
+      useInheritedMediaQuery: false,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       scrollBehavior: const MaterialScrollBehavior().copyWith(
         dragDevices: {
