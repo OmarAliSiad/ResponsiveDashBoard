@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/custom_container_back_%20ground.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/custom_dots_indicator.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/income_section.dart';
+import 'package:responsive_dash_board/features/presenation/widgets/income_section_without_detailed.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/my_card.dart';
 import '../../../core/utils/app_styles.dart';
 import '../data/models/transaction_model.dart';
@@ -115,7 +116,15 @@ class _MyCardAndIncomeSectionState extends State<MyCardAndIncomeSection> {
             ],
           ),
         ),
-        const IncomeSection(),
+        LayoutBuilder(
+          builder: (context, constraints) {
+            if (constraints.maxWidth < 480) {
+              return const IncomeSectionWithoutDetails();
+            } else {
+              return const IncomeSectionWithDetailed();
+            }
+          },
+        )
       ],
     );
   }
