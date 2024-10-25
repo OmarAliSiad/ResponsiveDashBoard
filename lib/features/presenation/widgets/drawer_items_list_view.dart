@@ -5,41 +5,48 @@ import '../../data/models/drawer_item.dart';
 import 'drawer_item.dart';
 
 class DrawerItmesListView extends StatefulWidget {
-  const DrawerItmesListView({
-    super.key,
-  });
+  const DrawerItmesListView({super.key});
+
   @override
   State<DrawerItmesListView> createState() => _DrawerItmesListViewState();
 }
 
 class _DrawerItmesListViewState extends State<DrawerItmesListView> {
+  late final List<DrawerItemModel> items; // Use late initialization
   int activeIndex = 0;
-  final List<DrawerItemModel> items = [
-    DrawerItemModel(
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    items = [
+      DrawerItemModel(
         title: 'Dashboard',
         image: Assets.imagesDashboard,
-        textStyle: AppStyles.styleRegular16()),
-    DrawerItemModel(
-      title: 'My Transaction',
-      image: Assets.imagesMyTransctions,
-      textStyle: AppStyles.styleRegular16(),
-    ),
-    DrawerItemModel(
-      title: 'Statistics',
-      image: Assets.imagesStatistics,
-      textStyle: AppStyles.styleRegular16(),
-    ),
-    DrawerItemModel(
-      title: 'Wallet Account',
-      image: Assets.imagesWalletAccount,
-      textStyle: AppStyles.styleRegular16(),
-    ),
-    DrawerItemModel(
-      title: 'My Investments',
-      image: Assets.imagesMyInvestments,
-      textStyle: AppStyles.styleRegular16(),
-    ),
-  ];
+        textStyle: AppStyles.styleRegular16(context),
+      ),
+      DrawerItemModel(
+        title: 'My Transaction',
+        image: Assets.imagesMyTransctions,
+        textStyle: AppStyles.styleRegular16(context),
+      ),
+      DrawerItemModel(
+        title: 'Statistics',
+        image: Assets.imagesStatistics,
+        textStyle: AppStyles.styleRegular16(context),
+      ),
+      DrawerItemModel(
+        title: 'Wallet Account',
+        image: Assets.imagesWalletAccount,
+        textStyle: AppStyles.styleRegular16(context),
+      ),
+      DrawerItemModel(
+        title: 'My Investments',
+        image: Assets.imagesMyInvestments,
+        textStyle: AppStyles.styleRegular16(context),
+      ),
+    ];
+    // Initialize the items list here
+  }
 
   @override
   Widget build(BuildContext context) {
