@@ -20,7 +20,7 @@ class InActiveDrawerItem extends StatelessWidget {
         alignment: Alignment.centerLeft,
         child: Text(
           drawerItemModel.title,
-          style: drawerItemModel.textStyle ?? AppStyles.styleRegular16(),
+          style: drawerItemModel.textStyle ?? AppStyles.styleRegular16(context),
         ),
       ),
     );
@@ -44,7 +44,7 @@ class ActiveDrawerItem extends StatelessWidget {
         alignment: Alignment.centerLeft,
         child: Text(
           drawerItemModel.title,
-          style: AppStyles.styleBold16(),
+          style: AppStyles.styleBold16(context),
         ),
       ),
       trailing: Container(
