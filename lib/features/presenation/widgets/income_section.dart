@@ -5,13 +5,13 @@ import 'package:responsive_dash_board/features/presenation/data/models/income_mo
 import 'package:responsive_dash_board/features/presenation/widgets/all_expenses_header.dart';
 import 'package:responsive_dash_board/features/presenation/widgets/custom_container_back_%20ground.dart';
 
-class IncomeSection extends StatefulWidget {
-  const IncomeSection({super.key});
+class IncomeSectionWithDetailed extends StatefulWidget {
+  const IncomeSectionWithDetailed({super.key});
   @override
-  State<IncomeSection> createState() => _IncomeSectionState();
+  State<IncomeSectionWithDetailed> createState() => _IncomeSectionWithDetailedState();
 }
 
-class _IncomeSectionState extends State<IncomeSection> {
+class _IncomeSectionWithDetailedState extends State<IncomeSectionWithDetailed> {
   int activeIndex = -1;
   List<IncomeModel> incomes = [
     IncomeModel(
@@ -74,7 +74,7 @@ class _IncomeSectionState extends State<IncomeSection> {
               Expanded(
                 flex: 2,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: List.generate(
                     4,
                     (index) {
@@ -128,7 +128,7 @@ class _IncomeSectionState extends State<IncomeSection> {
           );
         }
       }, mouseCursorResolver:
-          (FlTouchEvent, PieTouchResponse? pieTouchResponse) {
+          (FlTouchEvent e, PieTouchResponse? pieTouchResponse) {
         if (pieTouchResponse!.touchedSection != null &&
                 pieTouchResponse.touchedSection!.touchedSectionIndex == 0 ||
             pieTouchResponse.touchedSection!.touchedSectionIndex == 1 ||
