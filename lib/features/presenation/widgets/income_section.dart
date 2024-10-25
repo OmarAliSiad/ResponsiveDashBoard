@@ -92,12 +92,12 @@ class _IncomeSectionWithDetailedState extends State<IncomeSectionWithDetailed> {
                           padding: const EdgeInsets.only(right: 12),
                           child: Text(
                             incomes[index].title,
-                            style: AppStyles.styleRegular16(),
+                            style: AppStyles.styleRegular16(context),
                           ),
                         ),
                         trailing: Text(
                           incomes[index].prectange,
-                          style: AppStyles.styleMedium16().copyWith(
+                          style: AppStyles.styleMedium16(context).copyWith(
                             color: const Color(0xFF208CC8),
                           ),
                         ),
