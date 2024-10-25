@@ -18,19 +18,27 @@ class MyTransactionContainer extends StatelessWidget {
       child: ListTile(
         title: Padding(
           padding: const EdgeInsets.only(bottom: 6),
-          child: Text(
-            myTransactions.title,
-            style: AppStyles.styleSemiBold16(),
+          child: FittedBox(
+            alignment: Alignment.centerLeft,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              myTransactions.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
         ),
-        subtitle: Text(
-          myTransactions.subTitle,
-          style: AppStyles.styleRegular14(),
+        subtitle: FittedBox(
+          alignment: Alignment.centerLeft,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            myTransactions.subTitle,
+            style: AppStyles.styleRegular14(context),
+          ),
         ),
         trailing: Text(
           myTransactions.price,
-          style:
-              AppStyles.styleSemiBold20().copyWith(color: myTransactions.color),
+          style: AppStyles.styleSemiBold20(context)
+              .copyWith(color: myTransactions.color),
         ),
       ),
     );
