@@ -115,14 +115,14 @@ class _IncomeSectionWithoutDetailsState
           titlePositionPercentageOffset: activeIndex == 0 ? 1.5 : null,
           showTitle: true,
           value: 40,
-          titleStyle: AppStyles.styleMedium16(),
+          titleStyle: AppStyles.styleMedium16(context),
           radius: activeIndex == 0 ? 60 : 40,
           color: const Color(0xFFE2DECD),
         ),
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 1 ? 1.88 : null,
           title: activeIndex == 1 ? 'Design product' : '25%',
-          titleStyle: AppStyles.styleMedium16().copyWith(fontSize: 14),
+          titleStyle: AppStyles.styleMedium16(context).copyWith(fontSize: 14),
           value: 25,
           radius: activeIndex == 1 ? 60 : 40,
           color: const Color(0xFF208CC8),
@@ -130,7 +130,7 @@ class _IncomeSectionWithoutDetailsState
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 2 ? 1.35 : null,
           title: activeIndex == 2 ? 'Product royalti' : '20%',
-          titleStyle: AppStyles.styleMedium16(),
+          titleStyle: AppStyles.styleMedium16(context),
           value: 20,
           radius: activeIndex == 2 ? 60 : 40,
           color: const Color(0xFF4EB7F2),
@@ -138,7 +138,8 @@ class _IncomeSectionWithoutDetailsState
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 3 ? 1.5 : null,
           title: activeIndex == 3 ? 'Other' : '22%',
-          titleStyle: AppStyles.styleMedium16().copyWith(color: Colors.black),
+          titleStyle:
+              AppStyles.styleMedium16(context).copyWith(color: Colors.black),
           value: 22,
           radius: activeIndex == 3 ? 60 : 40,
           color: const Color(0xFF064061),
