@@ -1,3 +1,4 @@
+import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import '../../../core/utils/assets.dart';
 import '../data/models/all_expenses_item_model.dart';
@@ -33,27 +34,70 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: itemModels.asMap().entries.map(
-        (entry) {
-          var index = entry.key;
-          var itemModel = entry.value;
-          return Expanded(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: InkWell(
-                onTap: () {
-                  selectedIndex(index);
-                },
-                child: AllExpensesItem(
-                  itemModel: itemModel,
-                  isSelected: activeIndex == index,
-                ),
-              ),
+      children: [
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              selectedIndex(0);
+            },
+            child: AllExpensesItem(
+              itemModel: itemModels[0],
+              isSelected: activeIndex == 0,
             ),
-          );
-        },
-      ).toList(),
+          ),
+        ),
+        const SizedBox(
+          width: 12,
+        ),
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              selectedIndex(1);
+            },
+            child: AllExpensesItem(
+              itemModel: itemModels[1],
+              isSelected: activeIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 12,
+        ),
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              selectedIndex(2);
+            },
+            child: AllExpensesItem(
+              itemModel: itemModels[2],
+              isSelected: activeIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
+    // return Row(
+    //   children: itemModels.asMap().entries.map(
+    //     (entry) {
+    //       var index = entry.key;
+    //       var itemModel = entry.value;
+    //       return Expanded(
+    //         child: Padding(
+    //           padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+    //           child: InkWell(
+    //             onTap: () {
+    //               selectedIndex(index);
+    //             },
+    //             child: AllExpensesItem(
+    //               itemModel: itemModel,
+    //               isSelected: activeIndex == index,
+    //             ),
+    //           ),
+    //         ),
+    //       );
+    //     },
+    //   ).toList(),
+    // );
   }
 
   void selectedIndex(int index) {
