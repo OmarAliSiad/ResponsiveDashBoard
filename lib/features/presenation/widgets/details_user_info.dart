@@ -15,7 +15,7 @@ class DetailsUserInfo extends StatelessWidget {
       children: [
         Text(
           user.title,
-          style: AppStyles.styleMedium16(),
+          style: AppStyles.styleMedium16(context),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 12, bottom: 24, right: 16),
