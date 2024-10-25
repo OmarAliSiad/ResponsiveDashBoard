@@ -11,7 +11,20 @@ import 'my_transaction_history_header.dart';
 import 'my_transactions_list_view.dart';
 
 class MyCardAndIncomeSection extends StatefulWidget {
-  const MyCardAndIncomeSection({super.key});
+  final double? marginTop;
+  final double? marginBottom;
+  final double? marginLeft;
+  final double? marginRight;
+  final double? paddingHorizontal;
+  final double? paddingVertical;
+  const MyCardAndIncomeSection(
+      {super.key,
+      this.marginTop,
+      this.marginBottom,
+      this.marginLeft,
+      this.marginRight,
+      this.paddingHorizontal,
+      this.paddingVertical});
 
   @override
   State<MyCardAndIncomeSection> createState() => _MyCardAndIncomeSectionState();
@@ -60,12 +73,12 @@ class _MyCardAndIncomeSectionState extends State<MyCardAndIncomeSection> {
     return Column(
       children: [
         CustomBackGroundContainer(
-          marginTop: 40,
-          marginRight: 32,
-          marginLeft: 24,
-          marginBottom: 0,
-          paddingHorizontal: 24,
-          paddingVertical: 24,
+          marginTop: widget.marginTop ?? 40,
+          marginRight: widget.marginRight ?? 32,
+          marginLeft: widget.marginLeft ?? 24,
+          marginBottom: widget.marginBottom ?? 0,
+          paddingHorizontal: widget.paddingHorizontal ?? 24,
+          paddingVertical: widget.paddingVertical ?? 24,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -73,7 +86,7 @@ class _MyCardAndIncomeSectionState extends State<MyCardAndIncomeSection> {
                 width: 420,
                 child: Text(
                   'My card',
-                  style: AppStyles.styleSemiBold20(),
+                  style: AppStyles.styleSemiBold20(context),
                 ),
               ),
               const SizedBox(
@@ -106,7 +119,7 @@ class _MyCardAndIncomeSectionState extends State<MyCardAndIncomeSection> {
               const SizedBox(
                 height: 20,
               ),
-              Text('13 April 2022', style: AppStyles.styleMedium15()),
+              Text('13 April 2022', style: AppStyles.styleMedium15(context)),
               const SizedBox(
                 height: 16,
               ),
