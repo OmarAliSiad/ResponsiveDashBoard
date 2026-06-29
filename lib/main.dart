@@ -1,9 +1,20 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:responsive_dash_board/features/data/providers/select_items_provider.dart';
 import 'features/presenation/views/dash_board_view.dart';
 
 void main() {
-  runApp(const ResponsiveDashBoard());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => ProviderSelectItems(),
+        ),
+      ],
+      child: const ResponsiveDashBoard(),
+    ),
+  );
 }
 
 class ResponsiveDashBoard extends StatelessWidget {
