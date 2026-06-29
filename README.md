@@ -10,7 +10,7 @@
 - [✨ Key Features](#-key-features)
 - [🎯 Use Cases](#-use-cases)
 - [📸 Screenshots](#-screenshots)
-- [🛠️ Tech Stack](#-tech-stack)
+- [🛠️ Tech Stack](#Tech Stack)
 - [⚡ Quick Start](#-quick-start)
 - [🚀 Available Scripts](#-available-scripts)
 - [📁 Project Structure](#-project-structure)
