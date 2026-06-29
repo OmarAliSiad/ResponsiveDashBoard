@@ -10,11 +10,11 @@
 - [✨ Key Features](#-key-features)
 - [🎯 Use Cases](#-use-cases)
 - [📸 Screenshots](#-screenshots)
-- [🛠️ Tech Stack](#-Tech-Stack)
+- [🛠️ Tech Stack](#tech-stack)
 - [⚡ Quick Start](#-quick-start)
 - [🚀 Available Scripts](#-available-scripts)
 - [📁 Project Structure](#-project-structure)
-- [🔧 Development Setup](#-development-setup)
+- [🔧 Development Setup](#development-setup)
 - [👥 Contributors](#-contributors)
 - [🤝 Contributing](#-contributing)
 
@@ -39,6 +39,7 @@ ResponsiveDashBoard is a Flutter-based template designed to kickstart the develo
 
 ![card backGorundColor](https://raw.githubusercontent.com/OmarAliSiad/ResponsiveDashBoard/main/assets/images/card_backGorundColor.png)
 
+<a id="tech-stack"></a>
 ## 🛠️ Tech Stack
 
 - 🤖 **Android (Native)**
@@ -243,6 +244,7 @@ flutter pub get && flutter run
         └── win32_window.h
 ```
 
+<a id="development-setup"></a>
 ## 🛠️ Development Setup
 
 ### Flutter
